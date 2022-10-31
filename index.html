@@ -67,7 +67,7 @@
             var lines = [];
         }
 
-        $(document).ready(function(){
+        jQuery(document).ready(function(){
             jQuery.get('words.csv', function(data) {
                 var l = data.split(/\r\n|\n/);
                 var r = Math.floor(Math.random()*500);
