@@ -15,7 +15,7 @@
         <div class="container">
             <h2>Pictionary</h2>
             <p>Actualiza para generar nuevas palabras.</p>
-            <p>Una fila se elige al azar (en negritas). Si no aparece ninguna, queda a tu elección cuál elegir.</p>
+            <p>Una fila se elige al azar (en negritas). Si no aparece ninguna, queda a tu elección cuál escoger.</p>
             <table class="table">
                     <tr class="blue">
                         <td>Persona, Lugar, Animal</td>
@@ -67,44 +67,44 @@
             var lines = [];
         }
 
-        jQuery(document).ready(function(){
-            jQuery.get('words.csv', function(data) {
+        $(document).ready(function(){
+            $.get('words.csv', function(data) {
                 var l = data.split(/\r\n|\n/);
                 var r = Math.floor(Math.random()*500);
                 var e = l[r].split(',');
 
-                jQuery('#person').text(e[0]);
-                jQuery('#object').text(e[1]);
-                jQuery('#action').text(e[2]);
-                jQuery('#hard').text(e[3]);
-                jQuery('#pop').text(e[4]);
+                $('#person').text(e[0]);
+                $('#object').text(e[1]);
+                $('#action').text(e[2]);
+                $('#hard').text(e[3]);
+                $('#pop').text(e[4]);
 
                 r = Math.floor(Math.random()*500);
                 e = l[r].split(',');
 
-                jQuery('#person2').text(e[0]);
-                jQuery('#object2').text(e[1]);
-                jQuery('#action2').text(e[2]);
-                jQuery('#hard2').text(e[3]);
-                jQuery('#pop2').text(e[4]);
+                $('#person2').text(e[0]);
+                $('#object2').text(e[1]);
+                $('#action2').text(e[2]);
+                $('#hard2').text(e[3]);
+                $('#pop2').text(e[4]);
 
                 r = Math.floor(Math.random()*6);
 
                 switch (r) {
                     case 1:
-                        jQuery('.blue').css('font-weight', 'bold');
+                        $('.blue').css('font-weight', 'bold');
                         break;
                     case 2:
-                        jQuery('.yellow').css('font-weight', 'bold');
+                        $('.yellow').css('font-weight', 'bold');
                         break;
                     case 3:
-                        jQuery('.orange').css('font-weight', 'bold');
+                        $('.orange').css('font-weight', 'bold');
                         break;
                     case 4:
-                        jQuery('.green').css('font-weight', 'bold');
+                        $('.green').css('font-weight', 'bold');
                         break;
                     case 5:
-                        jQuery('.red').css('font-weight', 'bold');
+                        $('.red').css('font-weight', 'bold');
                         break;
                     default:
                         break;
